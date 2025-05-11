@@ -40,7 +40,6 @@
                     <a href="delete/hapus_data.php?id=<?php echo $mhs['id'];?>&kode=member" class="btn btn-sm btn-danger">Hapus</a>
                     <a href="index.php?page=edit-data-member&id=<?php echo $mhs['id'];?>"
                       class="btn btn-sm btn-success">Edit</a>
-                    <a class="btn btn-sm btn-primary">Lihat Data</a>
                   </td>
                 </tr>
                 <?php }?>

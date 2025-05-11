@@ -44,7 +44,6 @@
                       class="btn btn-sm btn-danger">Hapus</a>
                     <a href="index.php?page=edit-data-Admin&id_admin=<?= $mhs['id_admin'];?>"
                       class="btn btn-sm btn-success">Edit</a>
-                    <a class="btn btn-sm btn-primary">Lihat Data</a>
                   </td>
                 </tr>
                 <?php }?>
