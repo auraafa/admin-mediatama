@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
 
     // Ambil data file berdasarkan ID
-    $result = mysqli_query($conn, "SELECT * FROM tb_dokumen WHERE id = $id");
+    $result = mysqli_query($koneksi, "SELECT * FROM tb_dokumen WHERE id = '$id'");
     $data = mysqli_fetch_assoc($result);
 
     if ($data) {
@@ -17,7 +17,8 @@ if (isset($_GET['id'])) {
         }
 
         // Hapus dari database
-        mysqli_query($conn, "DELETE FROM tb_dokumen WHERE id = $id");
+        mysqli_query($koneksi, "DELETE FROM tb_dokumen WHERE id = '$id'");
+
     }
 }
 

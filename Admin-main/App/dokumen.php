@@ -31,49 +31,100 @@ if (isset($_POST['upload'])) {
 <head>
     <title>Kelola Dokumen</title>
     <style>
-        body { font-family: Arial; padding: 20px; background-color:hsl(240, 2.10%, 90.80%); }
         .box {
-            max-width: 800px;
+            max-width: 900px; /* enlarged container */
             margin: auto;
             background: white;
             border: 1px solid #ccc;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .pesan {
+            margin: 10px 0;
+            font-weight: bold;
+            background-color: #e7f3fe;
+            color: #31708f;
+            border: 1px solid #bce8f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
         }
         button, a.btn {
-            padding: 6px 12px;
-            margin-right: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            margin-right: 7px;
             text-decoration: none;
             color: white;
             background-color: #007BFF;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        button:hover, a.btn:hover {
+            opacity: 0.85;
         }
         a.btn-download { background-color: #28a745; }
         a.btn-view { background-color: #17a2b8; }
         a.btn-delete { background-color: #dc3545; }
-        .pesan { margin: 10px 0; font-weight: bold; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 1.1rem; /* bigger font */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 14px 12px; /* bigger padding */
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* make the button container inside the td flex to keep buttons inline and spaced */
+        td > .btn {
+            /* already inline-flex, just ensure no line break inside cell */
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Dokumen</h2>
+        <h2>Arsip Dokumen</h2>
 
         <?php if (isset($pesan)) echo "<div class='pesan'>$pesan</div>"; ?>
 
         <form action="" method="POST" enctype="multipart/form-data">
-            <label>Pilih File:</label><br> <input type="file" name="file" required>
-            
+            <label>Pilih File:</label>
+            <input type="file" name="file" required>
             <button type="submit" name="upload">Upload</button>
         </form>
 
         <hr>
 
-        <h3>Daftar Dokumen</h3>
         <table>
             <tr>
                 <th>Nama File</th>
