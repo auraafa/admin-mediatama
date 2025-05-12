@@ -26,7 +26,6 @@
     </a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
 
       <form action="conf/autentikasi.php" method="post">
         <div class="input-group mb-3">

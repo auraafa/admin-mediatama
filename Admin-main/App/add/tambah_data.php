@@ -35,11 +35,9 @@ $Ukuran_File = $_GET['Ukuran_File'] ?? '';
 //echo htmlspecialchars($jabatan) . "<br>";
 //echo htmlspecialchars($status) . "<br>";
 $query = mysqli_query($koneksi,"INSERT INTO tb_karyawan (nama,Email,jabatan,status) VALUE('$nama','$email','$jabatan','$status')");
-header('Location: ../index.php?page=data-karyawan');
+header('Location: ../index.php?page=data-Karyawan');
 $query = mysqli_query($koneksi,"INSERT INTO tb_admin (nama,username,email,password,status_akun,level) VALUE('$nama','$username','$email','$password','$status_akun','$level')");
-header('Location: ../index.php?page=data-admin');
+header('Location: ../index.php?page=data-Admin');
 $query = mysqli_query($koneksi,"INSERT INTO tb_member (nama,no_hp,email,paket) VALUE('$nama','$no_hp','$email','$paket','$status')");
-header('Location: ../index.php?page=data-admin');
-$query = mysqli_query($koneksi,"INSERT INTO tb_dokumen (Nama_Dokumen,Jenis_Dokumen,Tanggal_Dokumen,Ukuran_File) VALUE('$Nama_Dokumen','$Jenis_Dokumen','$Tanggal_Unggah','$Ukuran_File')");
-header('Location: ../index.php?page=data-admin');
+header('Location: ../index.php?page=data-Member');
 ?>

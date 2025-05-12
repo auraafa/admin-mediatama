@@ -7,7 +7,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -36,7 +35,7 @@
               <li class="nav-item">
                 <a href="index.php?page=data-member" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Member</p>
+                  <p>Data Pelanggan</p>
                 </a>
               </li>
             </ul>
@@ -68,7 +67,7 @@
             <a href="logout.php" class="nav-link text-red ">
               <i class="nav-icon fas fa-power-off"></i>
               <p>
-                logout
+                Log Out
               
               </p>
             </a>

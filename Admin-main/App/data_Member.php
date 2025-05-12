@@ -7,7 +7,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Data Member</h3>
+            <h3 class="card-title">Data Pelanggan</h3>
           </div>
           <!-- /.card-header -->
           <class="card-body">
