@@ -7,7 +7,7 @@ $view  = mysqli_fetch_array($query);
     <div class="container-fluid">
       <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Edit Data Member</h3>
+                <h3 class="card-title">Edit Data Pelanggan</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

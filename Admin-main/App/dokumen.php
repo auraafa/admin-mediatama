@@ -32,11 +32,11 @@ if (isset($_POST['upload'])) {
     <title>Kelola Dokumen</title>
     <style>
         .box {
-            max-width: 900px; /* enlarged container */
+            max-width: 900px; /* widened container */
             margin: auto;
             background: white;
             border: 1px solid #ccc;
-            padding: 25px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
@@ -68,15 +68,15 @@ if (isset($_POST['upload'])) {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 18px;
-            margin-right: 7px;
+            padding: 8px 12px;
+            margin-right: 5px;
             text-decoration: none;
             color: white;
             background-color: #007BFF;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: background-color 0.3s;
             white-space: nowrap;
         }
@@ -89,12 +89,12 @@ if (isset($_POST['upload'])) {
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 25px;
-            font-size: 1.1rem; /* bigger font */
+            margin-top: 20px;
+            font-size: 0.9rem;
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 14px 12px; /* bigger padding */
+            padding: 10px;
             text-align: left;
             vertical-align: middle;
         }
@@ -104,10 +104,14 @@ if (isset($_POST['upload'])) {
         tr:hover {
             background-color: #f1f1f1;
         }
-        /* make the button container inside the td flex to keep buttons inline and spaced */
-        td > .btn {
-            /* already inline-flex, just ensure no line break inside cell */
-            margin-bottom: 0;
+        /* Flex container for action buttons to keep them horizontal and with spacing */
+        td.action-buttons {
+            display: flex;
+            gap: 6px;
+            padding: 10px 8px;
+        }
+        td.action-buttons > a.btn {
+            margin: 0;
         }
     </style>
 </head>
@@ -138,7 +142,7 @@ if (isset($_POST['upload'])) {
                 echo "<tr>
                     <td>{$d['nama_file']}</td>
                     <td>{$d['tanggal_upload']}</td>
-                    <td>
+                    <td class='action-buttons'>
                         <a class='btn btn-view' href='{$file}' target='_blank'>Lihat</a>
                         <a class='btn btn-download' href='{$file}' download>Download</a>
                         <a class='btn btn-delete' href='backend/hapus_dokumen.php?id={$d['id']}' onclick='return confirm(\"Yakin hapus file?\")'>Hapus</a>
@@ -150,3 +154,4 @@ if (isset($_POST['upload'])) {
     </div>
 </body>
 </html>
+
