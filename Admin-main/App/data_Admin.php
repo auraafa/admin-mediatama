@@ -69,7 +69,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="get" action="add/tambah_data.php">
+      <form method="post" action="add/tambah_data.php">
         <div class="modal-body">
           <div class="form-row">
             <div class="col">

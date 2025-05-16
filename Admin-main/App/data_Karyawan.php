@@ -64,17 +64,17 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="get" action="add/tambah_data.php">
+      <form method="post" action="add/tambah_data_karyawan.php">
         <div class="modal-body">
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Nama" name="Nama" required>
+              <input type="text" class="form-control" placeholder="nama" name="nama" required>
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Email" name="Email" required>
+              <input type="text" class="form-control" placeholder="Email" name="email" required>
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Jabatan" name="Jabatan" required>
+              <input type="text" class="form-control" placeholder="jabatan" name="jabatan" required>
             </div>
             <div class="col">
               <select class="custom-select" name="status" required>

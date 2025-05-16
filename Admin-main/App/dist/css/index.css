@@ -1,0 +1,4 @@
+.dark-mode .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: #8e44ad !important;
+  color: #f8f1ff !important;
+}

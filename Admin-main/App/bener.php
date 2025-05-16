@@ -17,7 +17,6 @@ $view = mysqli_fetch_array($query);?>
     <div class="icon">
       <i class="ion ion-person-add"></i>
     </div>
-    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->
@@ -30,9 +29,8 @@ $view = mysqli_fetch_array($query);?>
       <p>Pelanggan Selesai</p>
     </div>
     <div class="icon">
-      <i class="ion ion-stats-bars"></i>
+      <i class="ion ion-person"></i>
     </div>
-    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
   </div>
 </div>
 <!-- ./col -->

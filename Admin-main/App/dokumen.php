@@ -135,7 +135,7 @@ if (isset($_POST['upload'])) {
                 <th>Tanggal Upload</th>
                 <th>Aksi</th>
             </tr>
-            <?php
+           <?php
             $query = mysqli_query($koneksi, "SELECT * FROM tb_dokumen ORDER BY tanggal_upload DESC");
             while ($d = mysqli_fetch_array($query)) {
                 $file = $d['path_file'];
@@ -145,11 +145,12 @@ if (isset($_POST['upload'])) {
                     <td class='action-buttons'>
                         <a class='btn btn-view' href='{$file}' target='_blank'>Lihat</a>
                         <a class='btn btn-download' href='{$file}' download>Download</a>
-                        <a class='btn btn-delete' href='backend/hapus_dokumen.php?id={$d['id']}' onclick='return confirm(\"Yakin hapus file?\")'>Hapus</a>
+                        <a href='delete/hapus_data.php?id={$d['id']}&kode=dokumen' class='btn btn-sm btn-danger'>Hapus</a>
                     </td>
                 </tr>";
             }
             ?>
+
         </table>
     </div>
 </body>

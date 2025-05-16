@@ -1,6 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2020-2025 <a href="https://adminlte.io">Admin.io</a>.</strong>
-    All rights reserved.
+    
 </footer>
 
   <!-- jQuery -->

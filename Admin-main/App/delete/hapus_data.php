@@ -18,4 +18,10 @@ if($_GET['kode'] == 'member'){
     $query = mysqli_query($koneksi,"DELETE FROM tb_member WHERE id='$id' ");
     header('Location: ../index.php?page=data-member');
 }
+
+if($_GET['kode'] == 'dokumen'){
+    $id = $_GET['id'];
+    $query = mysqli_query($koneksi,"DELETE FROM tb_dokumen WHERE id='$id' ");
+    header('Location: ../index.php?page=dokumen');
+}
 ?>
